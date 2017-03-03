@@ -18,13 +18,11 @@ $(".slide-show").find(".single-slide").each(function(index){
 $(".prev-slide").click(function(e){
 	e.preventDefault();
 	slide(currentSlideIndex-1);
-	currentSlideIndex--;
 });
 	
 $(".next-slide").click(function(e){
 		e.preventDefault();
 		slide(currentSlideIndex+1);
-		currentSlideIndex++;
 });
 	
 	
@@ -41,6 +39,7 @@ function slide(newSlideIndex){
 	function callBack(){
     $('.slide-show').fadeIn(1000);
 	}
+	currentSlideIndex=newSlideIndex;
 }
 	
 			
